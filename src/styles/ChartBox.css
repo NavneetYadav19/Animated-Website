@@ -1,0 +1,87 @@
+/* ChartBox.css */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.slide-container1 {
+  @apply w-[450px] h-screen fixed right-[-25px] top-[450px] bottom-0 overflow-hidden;
+}
+
+.slide-content1 {
+  @apply w-[450px] h-full bg-transparent text-white transition-transform duration-1000 ease-in-out;
+}
+
+.slide-in1 {
+  animation: slideIn1 1.5s ease-in-out forwards;
+}
+
+.slide-out1 {
+  animation: slideOut1 1.5s ease-in-out forwards;
+}
+
+@keyframes slideIn1 {
+  from {
+    transform: translateX(100%); /* Start from the right outside the screen */
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut1 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%); /* Slide out to the right outside the screen */
+  }
+}
+
+.donut-container {
+  animation: donutfade 3s;
+}
+
+.donut-segment-2 {
+  stroke: #5356FF;
+  animation: donut1 3s;
+}
+
+.segment-2 {
+  fill: #5356FF;
+}
+
+@keyframes donutfade {
+  /* this applies to the whole svg item wrapper */
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes donutfadelong {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes donut2 {
+  0% {
+    stroke-dasharray: 0, 100;
+  }
+  100% {
+    stroke-dasharray: 30, 70;
+  }
+}
+
+.donut-percent {
+  font-size: 0.5em;
+  line-height: 1;
+  transform: translateY(0.5em);
+  font-weight: bold;
+}

@@ -1,0 +1,48 @@
+/* src/styles/TransparentCircle.css */
+.transparent-circle {
+    width: 455.91549430918954px;
+    height: 455.91549430918954px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: transform 0.5s; /* Add a transition for smooth pop-up and pop-out */
+  }
+  
+  .transparent-circle.popped {
+    transform: scale(1);
+  }
+  
+  .medium-boxes {
+    position: absolute;
+    top: 100;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    visibility: hidden; /* Initially hide the boxes */
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 0.5s, visibility 0.5s; /* Add a transition for smooth visibility change */
+  }
+  
+  .medium-boxes.visible {
+    visibility: visible; /* Show the boxes when FullCircle is popped up */
+    opacity: 1; /* Set opacity to 1 when FullCircle is popped up */
+  }
+  
+  .medium-box {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    position: absolute;
+    transform-origin: center center;
+  }
+  

@@ -1,0 +1,100 @@
+/* src/styles/FullCircle.css */
+.full-circle {
+  position: relative;
+  width: 450.91549430918954px; /* Same as the donut circle */
+  height: 450.91549430918954px; /* Same as the donut circle */
+  animation: fullCirclePop 15s linear infinite; /* Increased the total duration to 15s for the entire cycle */
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%) scale(0); /* Center and initially scale down */
+}
+
+.box-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  width: 60px; /* Adjust box size as needed */
+  height: 60px; /* Adjust box size as needed */
+  border-radius: 20%; /* Make it circular */
+  position: absolute;
+}
+
+.box-label {
+  color: #000; /* Adjust text color */
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100px;
+  margin-top: 15px;
+  transform: translate(-50%, -50%);
+}
+
+.box-1 {
+  top: -240px; 
+  left: -310px; 
+  background-color: blue;
+}
+
+.box-2 {
+  top: -110px; 
+  left: -355px; 
+  background-color: purple;
+}
+
+.box-3 {
+  top: 20px; 
+  left: -355px; 
+  background-color: #000;
+}
+
+.box-4 {
+  top: 150px; 
+  left: -305px; 
+  background-color: #000;
+}
+
+.box-5 {
+  top: 30px; 
+  right: -360px; 
+  background-color: whitesmoke;
+}
+
+.box-6 {
+  top: 155px; 
+  right: -320px; 
+  background-color: #F7F7F7;
+}
+
+.switch-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.switch-button {
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+@keyframes fullCirclePop {
+  0%, 100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  10%, 40% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50%, 100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}

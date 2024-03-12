@@ -1,0 +1,38 @@
+/* ChartBox.css */
+.slide-container3 {
+    @apply w-[450px] h-screen fixed right-[395px] top-[550px] bottom-0 overflow-hidden;
+  }
+  
+  .slide-content3 {
+    @apply w-[450px] h-full bg-transparent text-white transition-transform duration-1000 ease-in-out;
+  }
+
+.slide-in3 {
+  animation: slideIn3 1.7s ease-in-out forwards;
+}
+
+.slide-out3 {
+  animation: slideOut3 1.7s ease-in-out forwards;
+}
+
+@keyframes slideIn3 {
+  from {
+    transform: translateY(100%); /* Start from the right outside the screen */
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut3 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%); /* Slide out to the right outside the screen */
+  }
+}
+
+
+
+
